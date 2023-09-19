@@ -23,5 +23,16 @@ React is extremely popular, declarative, component-based, state-drive JavaScript
 
 ## Setup React App
 
-`cmd
-npx create-react-app project_name`
+```cmd
+npx create-react-app project_name
+```
+
+### Folder Structure
+
+-   SRC: Where all development codes will go.
+-   PUBLIC: Where all assets for the final app lives. Assets such as; images, logo, favicons etc
+
+#### SRC Folder
+
+-   App.js: Contains main component of the app.
+-   index.js: Contains the React configuration and renders the components to the UI
