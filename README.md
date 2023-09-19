@@ -36,3 +36,32 @@ npx create-react-app project_name
 
 -   App.js: Contains main component of the app.
 -   index.js: Contains the React configuration and renders the components to the UI
+
+#### Rendering Root Component & Strict Mode
+
+-   The `index.js` file provided in the `src` folder renders the app-components in entirity
+-   Here is where you need to import all React modules necessary
+
+```javascript
+import React from "react";
+import ReactDOM from "react-dom/client";
+import "./index.css";
+```
+
+-   Create a variable to store the div-element provided in the HTML with the ID of "root"
+
+```javascript
+const root = ReactDOM.createRoot(document.getElementById("root"));
+```
+
+-   Render this variable by inserting intended components
+
+```javascript
+root.render(
+	<React.StrictMode>
+		<App />
+	</React.StrictMode>
+);
+```
+
+-   HINT: The component can be created in the `index.js` file or imported from another file.
