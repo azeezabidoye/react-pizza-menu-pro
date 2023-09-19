@@ -19,6 +19,9 @@ React is extremely popular, declarative, component-based, state-drive JavaScript
 
 -   NB: React was created in 2011 by Jordan Walke, an engineer working at Facebook at the time. In 2013, React was open-sourced for everyone to use.
 
-`html
-It is no longer advisable to use Create-react-app to build professional projects but Vite is now recommended [vite.dev](vite.dev)
-`
+`It is no longer advisable to use Create-react-app to build professional projects but Vite is now recommended [vite.dev](vite.dev)`
+
+## Setup React App
+
+`cmd
+npx create-react-app project_name`
