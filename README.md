@@ -65,3 +65,24 @@ root.render(
 ```
 
 -   HINT: The component can be created in the `index.js` file or imported from another file.
+
+#### Component
+
+A component is the fundamental piece of an interface and it contains 3-things
+a Data (HTML)
+b Logic (JS)
+c Appearance (CSS)
+
+## Styling React App
+
+Styles can be Inline or External. Moreover, CSS frameworks can be used to provide styles for components in React.
+
+-   Inline: Inline styling are provided as JS objects in JSX. Betterstill, an object variable can be created in the JSX and used as inline style for cleaner coding.
+
+```javascript
+const styleVar = {
+    color: "red",
+    padding: "20px"
+}
+<h1 style={styleVar}>Hello React</h1>
+```
