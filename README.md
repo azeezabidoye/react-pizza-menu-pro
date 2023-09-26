@@ -86,3 +86,14 @@ const styleVar = {
 }
 <h1 style={styleVar}>Hello React</h1>
 ```
+
+NB: Only variables and functions declared in a JSX component is applicable to the component.
+
+-   External: External CSS can be provided in the `SRC` folder containing the `App.js` file also.
+
+1. Import the CSS file into the App file.
+2. insert `classes` provided in the CSS as `className` in the JSX elements necessary.
+
+```html
+<h1 className="header">Hello React!</h1>
+```
