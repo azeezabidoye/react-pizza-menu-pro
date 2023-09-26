@@ -97,3 +97,27 @@ NB: Only variables and functions declared in a JSX component is applicable to th
 ```html
 <h1 className="header">Hello React!</h1>
 ```
+
+## Passing and Receiving Props
+
+Props is how we pass data inbetween components. Especially from a parent component to a child component. We can imagine prop as being a communication channel between a parent and a child component.
+You can add customized attribute to a JSX syntax where its being used in the parent component.
+
+```html
+<Pizza ingredient="tomato and pasta" brand="foodCo" />
+```
+
+These attributes are called props and are therefore meant to be passed into component function as parameters.
+
+```javascript
+function Pizza(props) {}
+```
+
+Props can then be used as string interpolations to populate the component.
+
+```html
+<p>{props.ingredient}</p>
+<h2>{props.brand}</h2>
+```
+
+HINT: Customized attribute or props becomes a javascript object which is interpolated using dot-notation.
