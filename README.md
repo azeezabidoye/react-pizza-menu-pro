@@ -121,3 +121,53 @@ Props can then be used as string interpolations to populate the component.
 ```
 
 HINT: Customized attribute or props becomes a javascript object which is interpolated using dot-notation.
+
+## Rendering Lists
+
+List of the items to be displayed can be rendered by using JavaScript `map()` method
+
+-   Create an array of objects for the items either in a file or in the global scope
+-   Use semantic syntax i.e `<ul>` to render the list in the parent component
+-   Make use of JS expression to loop through the array of items
+-   Add a key attribute to the loop to avoid error and to create unique key for each item
+
+```javascript
+<ul>
+	{pizzaData.map((pizza) => (
+		<Pizza pizzaObj={pizza} key={pizza.name} />
+	))}
+</ul>
+```
+
+-   Rendering the list to the child component requires using semantic syntax i.e `<li>`
+-   The `props` remain passed-in into the component
+-   The array-element-created as prop from the loop servees as the main object for destructuring
+
+```javascript
+<li>{props.pizzaObj.ingredients}</li>
+```
+
+## Conditional Rendering
+
+1.  Using the `&&` operator
+
+```javascript
+{
+	pizzas && <p>We are open!</p>;
+}
+```
+
+2 Ternary Operator
+
+```javascript
+{
+	pizzas ? <p>We are open!</p> : <p>Closed for today</p>;
+}
+```
+
+3 Conditional Reandering with Multiple Returns
+Here we can create an `if/else` statement before the JSX - using only `if` whereby the `else` part is meant to be the initial JSX returned
+
+```javascript
+if (pizzaData.soldOut) return null;
+```
