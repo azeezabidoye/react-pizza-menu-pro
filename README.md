@@ -171,3 +171,42 @@ Here we can create an `if/else` statement before the JSX - using only `if` where
 ```javascript
 if (pizzaData.soldOut) return null;
 ```
+
+## Destructuring Props
+
+Props are objects and therefore can be destructured when passed into components. Instead of using the keyword `props` as a parameter for a component, the props-name can be ussed instead. Thereby, there would be no need to use `props` for dot-notation when rendering it in the JSX
+
+```javascript
+function Pizza({ pizzaObj }) {
+	<h3>{pizzObj.name}</h3>;
+}
+```
+
+## React Fragment
+
+Written as `<React.Fragment>...</React.Fragment>` or `<>...</>`
+This is used in place of `<div` but it is important to use the syntax containing the element name if it will be wrapped around a list `<li>` element because list requires `keys`
+
+```javascript
+<React.Fragment key="items">
+	<li>Pizza and pasta</li>
+</React.Fragment>
+```
+
+## Setting Classes and Text Conditionally
+
+Let's say I need to apply a class-modifier on some items in a `<div`, for instance
+
+```html
+<li className="pizza sold-out">Pasta mixed cum chicken</li>
+```
+
+But I want the modifier to be applied ONLY to some elements with a boolean-property. Class conditioning will help distribute the effect of these classes accordingly.
+
+```javascript
+<li className={`pizza ${pizza.soldOut ? "sold-out" : ""}`}>
+	Pasta mixed cum chicken
+</li>
+```
+
+💡 There are two classes in the line above. The first is `pizza` and the second is `sold-out` which applies only to element with the `pizza.soldOut` property.
